@@ -2,14 +2,49 @@
 
 Sistema de cadastro e consulta de presbíteros católicos do Brasil, incluindo padres, bispos e diáconos.
 
+## Instalação
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/presbyterian-registry.git
+cd presbyterian-registry
+```
+
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Configure as variáveis de ambiente:
+   - Crie um arquivo `.env` na raiz do projeto
+   - Adicione as seguintes variáveis:
+```env
+SUPABASE_URL=sua_url_do_supabase
+SUPABASE_KEY=sua_chave_do_supabase
+```
+
+4. Configure o banco de dados:
+   - Acesse o console do Supabase
+   - Execute as migrações em `supabase/migrations`
+   - Configure as políticas de segurança (RLS)
+
+5. Inicie o servidor de desenvolvimento:
+```bash
+npm start
+```
+
+6. Acesse o sistema:
+   - Abra o navegador em `http://localhost:4200`
+   - Credenciais de administrador:
+     - Email: guthierresc@hotmail.com
+     - Senha: Gutim@2025
+
 ## Páginas do Sistema
 
 1. **Login** (`/login`)
    - Acesso administrativo
    - Autenticação segura
-   - Credenciais de administrador:
-     - Email: guthierresc@hotmail.com
-     - Senha: Gutim@2025
+   - Credenciais de administrador
 
 2. **Página Inicial** (`/`)
    - Busca em tempo real por nome ou diocese
@@ -41,6 +76,9 @@ Sistema de cadastro e consulta de presbíteros católicos do Brasil, incluindo p
    - Exclusão de registros
    - Filtros e busca avançada
    - Visualização detalhada de documentos
+   - Ativação/desativação de usuários
+   - Controle de status de cadastro
+   - Histórico de atualizações
 
 ## Funcionalidades
 
@@ -62,6 +100,8 @@ Sistema de cadastro e consulta de presbíteros católicos do Brasil, incluindo p
 - Histórico
 - Contatos
 - Documentos
+- Status do cadastro
+- Última atualização
 
 ### Painel Administrativo
 - Estatísticas em tempo real
@@ -72,6 +112,8 @@ Sistema de cadastro e consulta de presbíteros católicos do Brasil, incluindo p
 - Interface responsiva
 - Múltiplas visualizações
 - Exportação de dados
+- Controle de status
+- Histórico de alterações
 
 ## Tecnologias Utilizadas
 
@@ -112,20 +154,8 @@ src/
 - Confirmação de ações críticas
 - Logs de atividades
 - Backup automático
-
-## Instalação e Execução
-
-1. Clone o repositório
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Configure as variáveis de ambiente:
-   - Crie um arquivo `.env` com as credenciais do Supabase
-4. Execute o projeto:
-   ```bash
-   npm start
-   ```
+- Controle de status de usuário
+- Histórico de alterações
 
 ## Contribuição
 

@@ -20,6 +20,8 @@ export interface Clergy {
   identityDocument: string;
   profileImage: string;
   status: 'pending' | 'approved' | 'rejected';
+  isActive: boolean;
+  lastUpdate: Date;
   createdAt: Date;
   updatedAt: Date;
 }

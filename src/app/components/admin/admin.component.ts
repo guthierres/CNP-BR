@@ -7,17 +7,17 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 @Component({
   selector: 'app-admin',
   template: `
-    <div class="min-h-screen bg-gray-100">
+    <div class="min-h-screen bg-slate-50">
       <!-- Navbar -->
-      <nav class="bg-white shadow-sm sticky top-0 z-50">
+      <nav class="bg-[#1B3461] shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16">
             <div class="flex items-center">
-              <h1 class="text-xl font-semibold text-gray-900">Painel Administrativo</h1>
+              <h1 class="text-xl font-semibold text-white">Painel Administrativo</h1>
             </div>
             <div class="flex items-center space-x-4">
-              <span class="text-gray-600">{{adminEmail}}</span>
-              <button (click)="logout()" class="flex items-center text-gray-600 hover:text-gray-900 bg-gray-100 px-4 py-2 rounded-lg transition-colors">
+              <span class="text-white">{{adminEmail}}</span>
+              <button (click)="logout()" class="flex items-center text-white hover:text-gray-200 bg-[#2C4B8C] px-4 py-2 rounded-lg transition-colors">
                 <i class="pi pi-sign-out mr-2"></i>
                 Sair
               </button>
@@ -31,48 +31,48 @@ import { ConfirmationService, MessageService } from 'primeng/api';
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-shadow">
             <div class="flex items-center">
-              <div class="p-3 rounded-full bg-blue-100 text-blue-600">
+              <div class="p-3 rounded-full bg-[#E6EEF9] text-[#1B3461]">
                 <i class="pi pi-users text-2xl"></i>
               </div>
               <div class="ml-4">
                 <p class="text-gray-500 text-sm">Total de Cadastros</p>
-                <h3 class="text-2xl font-bold text-gray-900">{{statistics.total}}</h3>
+                <h3 class="text-2xl font-bold text-[#1B3461]">{{statistics.total}}</h3>
               </div>
             </div>
           </div>
           
           <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-shadow">
             <div class="flex items-center">
-              <div class="p-3 rounded-full bg-green-100 text-green-600">
+              <div class="p-3 rounded-full bg-[#E6EEF9] text-[#1B3461]">
                 <i class="pi pi-user text-2xl"></i>
               </div>
               <div class="ml-4">
                 <p class="text-gray-500 text-sm">Padres</p>
-                <h3 class="text-2xl font-bold text-gray-900">{{statistics.priests}}</h3>
+                <h3 class="text-2xl font-bold text-[#1B3461]">{{statistics.priests}}</h3>
               </div>
             </div>
           </div>
 
           <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-shadow">
             <div class="flex items-center">
-              <div class="p-3 rounded-full bg-purple-100 text-purple-600">
+              <div class="p-3 rounded-full bg-[#E6EEF9] text-[#1B3461]">
                 <i class="pi pi-user text-2xl"></i>
               </div>
               <div class="ml-4">
                 <p class="text-gray-500 text-sm">Bispos</p>
-                <h3 class="text-2xl font-bold text-gray-900">{{statistics.bishops}}</h3>
+                <h3 class="text-2xl font-bold text-[#1B3461]">{{statistics.bishops}}</h3>
               </div>
             </div>
           </div>
 
           <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 hover:shadow-md transition-shadow">
             <div class="flex items-center">
-              <div class="p-3 rounded-full bg-yellow-100 text-yellow-600">
+              <div class="p-3 rounded-full bg-[#E6EEF9] text-[#1B3461]">
                 <i class="pi pi-user text-2xl"></i>
               </div>
               <div class="ml-4">
                 <p class="text-gray-500 text-sm">Diáconos</p>
-                <h3 class="text-2xl font-bold text-gray-900">{{statistics.deacons}}</h3>
+                <h3 class="text-2xl font-bold text-[#1B3461]">{{statistics.deacons}}</h3>
               </div>
             </div>
           </div>
@@ -87,21 +87,11 @@ import { ConfirmationService, MessageService } from 'primeng/api';
                 <table class="min-w-full divide-y divide-gray-200">
                   <thead class="bg-gray-50">
                     <tr>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Nome
-                      </th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Tipo
-                      </th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Diocese
-                      </th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Data de Cadastro
-                      </th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Ações
-                      </th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Diocese</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data de Cadastro</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
                     </tr>
                   </thead>
                   <tbody class="bg-white divide-y divide-gray-200">
@@ -134,7 +124,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                         <button (click)="viewDetails(clergy)" 
-                                class="text-blue-600 hover:text-blue-900 bg-blue-50 p-2 rounded-lg">
+                                class="text-[#1B3461] hover:text-[#2C4B8C] bg-[#E6EEF9] p-2 rounded-lg">
                           <i class="pi pi-eye"></i>
                         </button>
                         <button (click)="approveClergy(clergy.id)"
@@ -158,21 +148,12 @@ import { ConfirmationService, MessageService } from 'primeng/api';
                 <table class="min-w-full divide-y divide-gray-200">
                   <thead class="bg-gray-50">
                     <tr>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Nome
-                      </th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Tipo
-                      </th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Diocese
-                      </th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Data de Aprovação
-                      </th>
-                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Ações
-                      </th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Diocese</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Última Atualização</th>
+                      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
                     </tr>
                   </thead>
                   <tbody class="bg-white divide-y divide-gray-200">
@@ -200,17 +181,32 @@ import { ConfirmationService, MessageService } from 'primeng/api';
                         <div class="text-sm text-gray-900">{{clergy.diocese}}</div>
                         <div class="text-sm text-gray-500">{{clergy.parish}}</div>
                       </td>
+                      <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
+                              [ngClass]="{
+                                'bg-green-100 text-green-800': clergy.isActive,
+                                'bg-red-100 text-red-800': !clergy.isActive
+                              }">
+                          {{clergy.isActive ? 'Ativo' : 'Inativo'}}
+                        </span>
+                      </td>
                       <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {{clergy.updatedAt | date:'dd/MM/yyyy'}}
+                        {{clergy.lastUpdate | date:'dd/MM/yyyy HH:mm'}}
                       </td>
                       <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                         <button (click)="viewDetails(clergy)"
-                                class="text-blue-600 hover:text-blue-900 bg-blue-50 p-2 rounded-lg">
+                                class="text-[#1B3461] hover:text-[#2C4B8C] bg-[#E6EEF9] p-2 rounded-lg">
                           <i class="pi pi-eye"></i>
                         </button>
                         <button (click)="editClergy(clergy)"
                                 class="text-orange-600 hover:text-orange-900 bg-orange-50 p-2 rounded-lg">
                           <i class="pi pi-pencil"></i>
+                        </button>
+                        <button (click)="toggleStatus(clergy)"
+                                [class]="clergy.isActive ? 
+                                  'text-red-600 hover:text-red-900 bg-red-50 p-2 rounded-lg' :
+                                  'text-green-600 hover:text-green-900 bg-green-50 p-2 rounded-lg'">
+                          <i [class]="clergy.isActive ? 'pi pi-ban' : 'pi pi-check'"></i>
                         </button>
                         <button (click)="confirmDelete(clergy)"
                                 class="text-red-600 hover:text-red-900 bg-red-50 p-2 rounded-lg">
@@ -227,11 +223,11 @@ import { ConfirmationService, MessageService } from 'primeng/api';
             <p-tabPanel header="Estatísticas">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 class="text-lg font-semibold mb-4">Cadastros por Diocese</h3>
+                  <h3 class="text-lg font-semibold mb-4 text-[#1B3461]">Cadastros por Diocese</h3>
                   <p-chart type="pie" [data]="dioceseChartData" [options]="chartOptions"></p-chart>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 class="text-lg font-semibold mb-4">Cadastros por Mês</h3>
+                  <h3 class="text-lg font-semibold mb-4 text-[#1B3461]">Cadastros por Mês</h3>
                   <p-chart type="bar" [data]="monthlyChartData" [options]="chartOptions"></p-chart>
                 </div>
               </div>
@@ -248,16 +244,16 @@ import { ConfirmationService, MessageService } from 'primeng/api';
             <!-- Profile Image and Basic Info -->
             <div class="md:col-span-1">
               <img [src]="selectedClergy.profileImage" class="w-full h-48 object-cover rounded-lg shadow-sm mb-4">
-              <div class="bg-gray-50 p-4 rounded-lg">
-                <h3 class="font-semibold text-lg mb-2">{{selectedClergy.name}}</h3>
-                <p class="text-gray-600">{{selectedClergy.type | titlecase}}</p>
+              <div class="bg-[#F8FAFC] p-4 rounded-lg">
+                <h3 class="font-semibold text-lg mb-2 text-[#1B3461]">{{selectedClergy.name}}</h3>
+                <p class="text-[#2C4B8C]">{{selectedClergy.type | titlecase}}</p>
                 <div class="mt-4 space-y-2">
                   <div class="flex items-center">
-                    <i class="pi pi-envelope text-gray-400 mr-2"></i>
+                    <i class="pi pi-envelope text-[#1B3461] mr-2"></i>
                     <span class="text-sm">{{selectedClergy.email}}</span>
                   </div>
                   <div class="flex items-center">
-                    <i class="pi pi-phone text-gray-400 mr-2"></i>
+                    <i class="pi pi-phone text-[#1B3461] mr-2"></i>
                     <span class="text-sm">{{selectedClergy.phone}}</span>
                   </div>
                 </div>
@@ -266,84 +262,84 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 
             <!-- Details -->
             <div class="md:col-span-2 space-y-6">
-              <div class="bg-gray-50 p-4 rounded-lg">
-                <h3 class="font-semibold mb-4">Informações Eclesiásticas</h3>
+              <div class="bg-[#F8FAFC] p-4 rounded-lg">
+                <h3 class="font-semibold mb-4 text-[#1B3461]">Informações Eclesiásticas</h3>
                 <div class="grid grid-cols-2 gap-4">
                   <div>
                     <p class="text-sm text-gray-500">Diocese</p>
-                    <p class="font-medium">{{selectedClergy.diocese}}</p>
+                    <p class="font-medium text-[#2C4B8C]">{{selectedClergy.diocese}}</p>
                   </div>
                   <div>
                     <p class="text-sm text-gray-500">Paróquia</p>
-                    <p class="font-medium">{{selectedClergy.parish}}</p>
+                    <p class="font-medium text-[#2C4B8C]">{{selectedClergy.parish}}</p>
                   </div>
                   <div>
                     <p class="text-sm text-gray-500">Data de Ordenação</p>
-                    <p class="font-medium">{{selectedClergy.ordinationDate | date}}</p>
+                    <p class="font-medium text-[#2C4B8C]">{{selectedClergy.ordinationDate | date}}</p>
                   </div>
                   <div>
                     <p class="text-sm text-gray-500">Bispo Ordenante</p>
-                    <p class="font-medium">{{selectedClergy.ordinatingBishop}}</p>
+                    <p class="font-medium text-[#2C4B8C]">{{selectedClergy.ordinatingBishop}}</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-500">Status</p>
+                    <p class="font-medium" [class]="selectedClergy.isActive ? 'text-green-600' : 'text-red-600'">
+                      {{selectedClergy.isActive ? 'Ativo' : 'Inativo'}}
+                    </p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-500">Última Atualização</p>
+                    <p class="font-medium text-[#2C4B8C]">{{selectedClergy.lastUpdate | date:'dd/MM/yyyy HH:mm'}}</p>
                   </div>
                 </div>
               </div>
 
-              <div class="bg-gray-50 p-4 rounded-lg">
-                <h3 class="font-semibold mb-4">Biografia</h3>
+              <div class="bg-[#F8FAFC] p-4 rounded-lg">
+                <h3 class="font-semibold mb-4 text-[#1B3461]">Biografia</h3>
                 <p class="text-gray-700">{{selectedClergy.bio}}</p>
               </div>
 
-              <div class="bg-gray-50 p-4 rounded-lg">
-                <h3 class="font-semibold mb-4">Documentos</h3>
+              <div class="bg-[#F8FAFC] p-4 rounded-lg">
+                <h3 class="font-semibold mb-4 text-[#1B3461]">Documentos</h3>
                 <div class="flex space-x-4">
                   <a [href]="selectedClergy.ordinationDocument" target="_blank" 
-                     class="flex items-center text-blue-600 hover:text-blue-800">
+                     class="flex items-center text-[#1B3461] hover:text-[#2C4B8C]">
                     <i class="pi pi-file-pdf mr-2"></i>
                     <span>Documento de Ordenação</span>
                   </a>
                   <a [href]="selectedClergy.identityDocument" target="_blank"
-                     class="flex items-center text-blue-600 hover:text-blue-800">
+                     class="flex items-center text-[#1B3461] hover:text-[#2C4B8C]">
                     <i class="pi pi-file-pdf mr-2"></i>
                     <span>Documento de Identidade</span>
                   </a>
                 </div>
               </div>
 
-              <div class="bg-gray-50 p-4 rounded-lg">
-                <h3 class="font-semibold mb-4">Redes Sociais</h3>
+              <div class="bg-[#F8FAFC] p-4 rounded-lg">
+                <h3 class="font-semibold mb-4 text-[#1B3461]">Redes Sociais</h3>
                 <div class="flex space-x-4">
                   <a *ngIf="selectedClergy.socialMedia?.facebook" 
                      [href]="selectedClergy.socialMedia.facebook" 
                      target="_blank"
-                     class="text-blue-600 hover:text-blue-800">
+                     class="text-[#1B3461] hover:text-[#2C4B8C]">
                     <i class="pi pi-facebook text-xl"></i>
                   </a>
                   <a *ngIf="selectedClergy.socialMedia?.instagram"
                      [href]="selectedClergy.socialMedia.instagram"
                      target="_blank"
-                     class="text-pink-600 hover:text-pink-800">
+                     class="text-[#1B3461] hover:text-[#2C4B8C]">
                     <i class="pi pi-instagram text-xl"></i>
                   </a>
                   <a *ngIf="selectedClergy.socialMedia?.twitter"
                      [href]="selectedClergy.socialMedia.twitter"
                      target="_blank"
-                     class="text-blue-400 hover:text-blue-600">
+                     class="text-[#1B3461] hover:text-[#2C4B8C]">
                     <i class="pi pi-twitter text-xl"></i>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </p-dialog>
-
-      <!-- Edit Dialog -->
-      <p-dialog [(visible)]="showEdit" [modal]="true" [style]="{width: '70vw'}" header="Editar Cadastro"
-                [breakpoints]="{'960px': '95vw'}" [draggable]="false" [resizable]="false">
-        <div *ngIf="editingClergy" class="p-4">
-          <form [formGroup]="editForm" (ngSubmit)="saveEdit()" class="space-y-6">
-            <!-- Form fields here -->
-          </form>
         </div>
       </p-dialog>
 
@@ -520,6 +516,28 @@ export class AdminComponent implements OnInit {
             this.loadApprovedClergy();
             this.loadStatistics();
           });
+      }
+    });
+  }
+
+  toggleStatus(clergy: Clergy) {
+    const newStatus = !clergy.isActive;
+    const message = newStatus ? 'ativar' : 'desativar';
+    
+    this.confirmationService.confirm({
+      message: `Deseja ${message} o cadastro de ${clergy.name}?`,
+      accept: () => {
+        this.clergyService.updateClergy(clergy.id, { 
+          isActive: newStatus,
+          lastUpdate: new Date()
+        }).subscribe(() => {
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Sucesso',
+            detail: `Cadastro ${newStatus ? 'ativado' : 'desativado'} com sucesso`
+          });
+          this.loadApprovedClergy();
+        });
       }
     });
   }
